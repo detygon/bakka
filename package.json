@@ -1,0 +1,43 @@
+{
+  "name": "bakka",
+  "version": "1.0.0",
+  "description": "An intuitive and lightweight state management library for your Javascript applications.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json --fix",
+    "build": "tsc",
+    "test": "jest --config jest.config.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint:fix",
+    "preversion": "npm run lint:fix",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "vanilla js store",
+    "web components",
+    "state management",
+    "vuex",
+    "state"
+  ],
+  "author": "Salomon Dion <dev.mrdion@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@types/jest": "^24.0.6",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3"
+  }
+}
