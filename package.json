@@ -27,6 +27,10 @@
     "state"
   ],
   "author": "Salomon Dion <dev.mrdion@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdionjr/bakka.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.3.3",
